@@ -1,0 +1,6 @@
+*.pyc
+*~
+myvenv
+db.postgres
+/static
+.DS_Store
