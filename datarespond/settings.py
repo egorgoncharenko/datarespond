@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'datarespond.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'respond',  # имя базы данных, созданное на шаге 5
-        'USER': 'postgres',    # имя пользователя PostgreSQL
-        'PASSWORD': '235678',  # пароль пользователя PostgreSQL
-        'HOST': 'localhost',   # хост базы данных (обычно localhost)
-        'PORT': '5432',        # порт, который вы указали во время установки
+        'NAME': 'respond',
+        'USER': 'postgres',
+        'PASSWORD': '235678',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
