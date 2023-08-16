@@ -45,13 +45,21 @@
                     <td>{{ respondent.okpo }}</td>
                     <td>{{ respondent.inn }}</td>
                     <td>
-                        {% if respondent.phone %}
-                            {{ respondent.phone }}
-                        {% else %}
+                        {% for phone in respondent.phone.all %}
+                            {{ phone.address }}
+                            {% if not forloop.last %}, {% endif %}
+                        {% empty %}
                             Нет данных
-                        {% endif %}
+                        {% endfor %}
                     </td>
-                    <td>{{ respondent.email }}</td>
+                    <td>
+                        {% for email in respondent.email.all %}
+                            {{ email.address }}
+                            {% if not forloop.last %}, {% endif %}
+                        {% empty %}
+                            Нет данных
+                        {% endfor %}
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -69,3 +77,4 @@
     </div>
 </body>
 </html>
+

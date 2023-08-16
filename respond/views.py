@@ -25,6 +25,8 @@ def respondents(request):
 
     # Получаем записи, относящиеся к текущей странице
     respondents = page.object_list
+    phones = page.object_list
+    emails = page.object_list
 
     context = {
         'respondents': respondents,
