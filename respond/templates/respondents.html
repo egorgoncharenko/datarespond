@@ -33,6 +33,7 @@
                     <th>ОКПО</th>
                     <th>ИНН</th>
                     <th>Телефон</th>
+                    <th>Дополнительный Телефон</th>
                     <th>Email</th>
                     <th>Email дополнительный</th>
                 </tr>
@@ -53,8 +54,9 @@
 <!--                        {% endif %}-->
 <!--                    </td>-->
                     <td>{{ respondent.phone }}</td>
+                    <td>{{respondent.phone_double</td>
                     <td>{{ respondent.email}}</td>
-                    <td>{{ respondent.email_duble}}</td>
+                    <td>{{ respondent.email_double}}</td>
 
                 </tr>
                 {% endfor %}
