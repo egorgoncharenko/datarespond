@@ -1,12 +1,12 @@
 from import_export.admin import ImportExportModelAdmin
 from django.contrib import admin
 
-from .models import Respondent,Phone, Email
+from .models import Respondent, Phone, Email
 
 
 class RespondentAdmin(ImportExportModelAdmin):
     list_display = ('okpo', 'full_name', 'okved', 'inn', 'display_phones', 'display_emails')
-    search_fields = ('okpo', 'full_name', 'okved', 'inn', 'display_phones', 'display_emails')
+    search_fields = ('okpo', 'full_name', 'okved', 'inn', 'phone', 'email')
 
     def display_phones(self, obj):
         phones = obj.phone.all()
@@ -20,8 +20,15 @@ class RespondentAdmin(ImportExportModelAdmin):
 
     display_emails.short_description = 'Emails'
 
+
+
+
+
+
+
 class PhoneAdmin(ImportExportModelAdmin):
-    list_display = ('phone_number',)
+    list_display = ('phone_number', 'okpo')
+
 
 class EmailAdmin(ImportExportModelAdmin):
     list_display = ('email_address',)
