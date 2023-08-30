@@ -40,4 +40,3 @@ class Email(models.Model):
 
     class Meta:
         verbose_name_plural = 'Электронный адрес'
-
