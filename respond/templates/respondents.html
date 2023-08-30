@@ -33,7 +33,9 @@
                     <th>ОКПО</th>
                     <th>ИНН</th>
                     <th>Телефон</th>
+                    <th>Дополнительный Телефон</th>
                     <th>Email</th>
+                    <th>Email дополнительный</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,14 +46,18 @@
                     <td>{{ respondent.okved }}</td>
                     <td>{{ respondent.okpo }}</td>
                     <td>{{ respondent.inn }}</td>
-                    <td>
-                        {% if respondent.phone %}
-                            {{ respondent.phone }}
-                        {% else %}
-                            Нет данных
-                        {% endif %}
-                    </td>
-                    <td>{{ respondent.email }}</td>
+<!--                    <td>-->
+<!--                        {% if respondent.phone %}-->
+<!--                            {{ respondent.phone }}-->
+<!--                        {% else %}-->
+<!--                            Нет данных-->
+<!--                        {% endif %}-->
+<!--                    </td>-->
+                    <td>{{ respondent.phone }}</td>
+                    <td>{{respondent.phone_double}}</td>
+                    <td>{{ respondent.email}}</td>
+                    <td>{{ respondent.email_double}}</td>
+
                 </tr>
                 {% endfor %}
             </tbody>
