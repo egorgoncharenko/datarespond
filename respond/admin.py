@@ -27,7 +27,7 @@ class RespondentAdmin(ImportExportModelAdmin):
 
 
 class PhoneAdmin(ImportExportModelAdmin):
-    list_display = ('phone_number', 'okpo')
+    list_display = ('phone_number', )
 
 
 class EmailAdmin(ImportExportModelAdmin):
