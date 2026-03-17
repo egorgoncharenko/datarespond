@@ -1,0 +1,54 @@
+# DataRespond
+
+Веб-приложение для сбора и отображения данных в виде дашборда. Построено на Django с PostgreSQL и упаковано в Docker для удобного развёртывания.
+
+## Стек технологий
+
+- **Backend:** Python, Django
+- **База данных:** PostgreSQL
+- **Контейнеризация:** Docker, Docker Compose
+- **Frontend:** Django Templates (HTML)
+
+## Структура проекта
+
+```
+datarespond/
+├── datarespond/        # Настройки Django-проекта (settings, urls, wsgi)
+├── respond/            # Основное приложение (models, views, templates)
+├── Dockerfile          # Сборка Docker-образа
+├── docker-compose.yaml # Оркестрация контейнеров (app + PostgreSQL)
+├── requirements.txt    # Python-зависимости
+└── manage.py           # Точка входа Django
+```
+
+## Быстрый старт
+
+### Предварительные требования
+
+- Docker и Docker Compose
+
+### Запуск
+
+```bash
+git clone https://github.com/egorgoncharenko/datarespond.git
+cd datarespond
+docker-compose up -d
+```
+
+Приложение будет доступно по адресу: `http://localhost:8000`
+
+### Применение миграций
+
+```bash
+docker-compose exec web python manage.py migrate
+```
+
+### Создание суперпользователя
+
+```bash
+docker-compose exec web python manage.py createsuperuser
+```
+
+## Автор
+
+**Egor Goncharenko** — [GitHub](https://github.com/egorgoncharenko)
